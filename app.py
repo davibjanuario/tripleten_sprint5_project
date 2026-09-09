@@ -1,11 +1,17 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-        
+
+st.header('EDA dos anúncios de vendas de carros')
+
+st.write('Escolha abaixo quando tipo de análise gostaria de ver:')
+
 car_data = pd.read_csv('vehicles.csv') # lendo os dados
 hist_button = st.button('Criar histograma') # criar um botão
 disp_button = st.button('Criar gráfico de dispersão') # criar um botão
-        
+
+
+
 if hist_button: # se o botão for clicado
     # escrever uma mensagem
     st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
